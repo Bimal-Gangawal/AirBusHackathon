@@ -1,0 +1,74 @@
+<!DOCTYPE >
+
+<html>
+    <head>
+        <script>
+            var submisson_dict;
+            
+function getdata(){
+var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+xmlhttp.open("POST", "http://0.0.0.0:8000/FlightsData",true);
+xmlhttp.setRequestHeader("Content-Type", "application/json");
+
+    MSN  = document.getElementById("MSN").value
+    HarnessLength = document.getElementById("HarnessLength").value
+    FlightProgram = document.getElementById("FlightProgram").value
+    GrossWeight = document.getElementById("GrossWeight").value
+    AtmPressure = document.getElementById("AtmPressure").value
+    RoomTemp = document.getElementById("RoomTemp").value
+    Airport = document.getElementById("Airport").value
+    FuelCapacityLeft = document.getElementById("FuelCapacityLeft").value
+    FuelCapacityRight = document.getElementById("FuelCapacityRight").value
+    FuelQuantityRight = document.getElementById("FuelQuantityRight").value
+    FuelQuantityLeft = document.getElementById("FuelQuantityLeft").value
+    MaxAltitude = document.getElementById("MaxAltitude").value
+    FlightNo= document.getElementById("FlightNo").value
+    submisson_dict = {
+"MSN" : MSN,
+"HarnessLength" : HarnessLength,
+"FlightProgram" : FlightProgram,
+"GrossWeight" : GrossWeight,
+"AtmPressure" : AtmPressure,
+"RoomTemp" : RoomTemp,
+"Airport" : Airport,
+"FuelCapacityLeft" : FuelCapacityLeft,
+"FuelCapacityRight" : FuelCapacityRight,
+"FuelQuantityRight" : FuelQuantityRight,
+"FuelQuantityLeft" : FuelQuantityLeft,
+"MaxAltitude" : MaxAltitude,
+"FlightNo": FlightNo
+}
+xmlhttp.send(JSON.stringify(submisson_dict));
+console.log(submisson_dict)
+}
+console.log(submisson_dict)
+   
+        </script>
+    </head>
+    
+    <body>
+        
+        <table border="1">
+                <tr>
+                    <td>MSN : </td>
+                    <td><input type="text" id="MSN"></td>
+                </tr>
+               
+            <tr><td>HarnessLength :</td><td> <input type="text" id="HarnessLength"></label></td></tr>
+        <tr><td>FlightProgram :</td><td><input type="text" id="FlightProgram"></label></td></tr>
+    <tr><td>GrossWeight : </td><td><input type="text" id="GrossWeight"></label></td></tr>
+<tr><td>AtmPressure : </td><td><input type="text" id="AtmPressure"></label></td></tr>
+<tr>    <td>   RoomTemp : </td><td><input type="text" id="RoomTemp"></label></td></tr>
+<tr>       <td>Airport : </td><td><input type="text" id="Airport"></label></td></tr>
+<tr>   <td>    FuelCapacityLeft : </td><td><input type="text" id="FuelCapacityLeft"></label></td></tr>
+<tr>   <td>    FuelCapacityRight : </td><td><input type="text" id="FuelCapacityRight"></label></td></tr>
+<tr>   <td>    FuelQuantityRight : </td><td><input type="text" id="FuelQuantityRight"></label></td></tr>
+<tr>   <td>    FuelQuantityLeft  : </td><td><input type="text" id="FuelQuantityLeft"></label></td></tr>
+<tr>  <td> MaxAltitude : </td><td><input type="text" id="MaxAltitude"></label></td></tr>
+<tr>   <td>    FlightNo : </td><td><input type="text" id="FlightNo"></label></td></tr>
+   </table>
+            <button id="Submit" name="Submit" value="Submit" onclick="getdata()">Submit</button>
+       
+
+    </body>
+</html>

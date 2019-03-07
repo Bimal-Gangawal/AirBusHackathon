@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  color: white;
+}
+
+.split {
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+.right {
+  right: 0;
+  background-color: red;
+}
+
+.centered {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translate(-25%, -25%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+}
+</style>
+</head>
+<body>
+
+<div class="split left">
+  <div class="centered">
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="https://www.pngkey.com/png/full/87-875030_red-plane-logo-pin-it-airplane-silhouette-red.png" alt="Flight News">
+    <h2>News1</h2>
+    <p>News2<   /p>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <img src="img_avatar.png" alt="Avatar man" style="height:100px;width:100px">
+    <h2>John Doe</h2>
+    <p>Some text here too.</p>
+  </div>
+</div>
+<div class="split right">
+        <div class="centered">
+          <img src="img_avatar.png" alt="Avatar man">
+          <h2>John Doe</h2>
+          <p>Some text here too.</p>
+        </div>
+</div>
+<div class="split right">
+        <div class="centered">
+          <img src="https://banner2.kisspng.com/20180225/dqe/kisspng-logo-ship-maritime-transport-cartoon-vector-ship-map-5a924db9d10241.5644922515195375938561.jpg" alt="Avatar man">
+          <h2>News Feed</h2>
+          <p>News1</p>
+        </div>
+</div>
+
+<a href="main.html"><h1 style = "margin-left:32%;margin-top:20%">Click here to enter the flight data</h1></a>
+<a href = "show.html"> <h1 style = "margin-left:42%"> Show Data</h1>
+
+    
+</body>
+</html> 

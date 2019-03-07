@@ -1,0 +1,223 @@
+<!DOCTYPE >
+
+<html>
+    <head>
+        <script>
+function show(){
+var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+    MSN  = document.getElementById("MSN").value
+    HarnessLength = document.getElementById("HarnessLength").value
+    FlightProgram = document.getElementById("FlightProgram").value
+    GrossWeight = document.getElementById("GrossWeight").value
+    AtmPressure = document.getElementById("AtmPressure").value
+    RoomTemp = document.getElementById("RoomTemp").value
+    Airport = document.getElementById("Airport").value
+    FuelCapacityLeft = document.getElementById("FuelCapacityLeft").value
+    FuelCapacityRight = document.getElementById("FuelCapacityRight").value
+    FuelQuantityRight = document.getElementById("FuelQuantityRight").value
+    FuelQuantityLeft = document.getElementById("FuelQuantityLeft").value
+    MaxAltitude = document.getElementById("MaxAltitude").value
+    FlightNo= document.getElementById("FlightNo").value
+    url = 'http://localhost:8000/getFilterFlightData'
+    count = 0
+    if(MSN != "")
+    {   if (count == 0)
+        {
+        url = url + "?MSN=" + MSN
+        count = count+1
+        }
+        else
+        {
+            url = url + "&MSN=" + MSN
+            count = count+1
+        }
+    }
+    if(HarnessLength != "")
+    {   if (count == 0)
+        {
+        url = url + "?HarnessLength=" + HarnessLength
+        count = count+1
+        }
+        else
+        {
+            url = url + "&HarnessLength=" + HarnessLength
+            count = count+1
+        }
+    }
+    if(FlightProgram != "")
+    {   if (count == 0)
+        {
+        url = url + "?FlightProgram=" + FlightProgram
+        count = count+1
+        }
+        else
+        {
+            url = url + "&FlightProgram=" + FlightProgram
+            count = count+1
+        }
+    }
+    if(GrossWeight != "")
+    {   if (count == 0)
+        {
+        url = url + "?GrossWeight=" + GrossWeight
+        count = count+1
+        }
+        else
+        {
+            url = url + "&GrossWeight=" + GrossWeight
+            count = count+1
+        }
+    }
+    if(AtmPressure != "")
+    {   if (count == 0)
+        {
+        url = url + "?AtmPressure=" + AtmPressure
+        count = count+1
+        }
+        else
+        {
+            url = url + "&AtmPressure=" + AtmPressure
+            count = count+1
+        }
+    }
+    if(RoomTemp != "")
+    {   if (count == 0)
+        {
+        url = url + "?RoomTemp=" + RoomTemp
+        count = count+1
+        }
+        else
+        {
+            url = url + "&RoomTemp=" + RoomTemp
+            count = count+1
+        }
+    }
+    if(Airport != "")
+    {   if (count == 0)
+        {
+        url = url + "?Airport=" + Airport
+        count = count+1
+        }
+        else
+        {
+            url = url + "&Airport=" + Airport
+            count = count+1
+        }
+    }
+    if(FuelCapacityLeft != "")
+    {   if (count == 0)
+        {
+        url = url + "?FuelCapacityLeft=" + FuelCapacityLeft
+        count = count+1
+        }
+        else
+        {
+            url = url + "&FuelCapacityLeft=" + FuelCapacityLeft
+            count = count+1
+        }
+    }
+    if(FuelCapacityRight != "")
+    {   if (count == 0)
+        {
+        url = url + "?FuelCapacityRight=" + FuelCapacityRight
+        count = count+1
+        }
+        else
+        {
+            url = url + "&FuelCapacityRight=" + FuelCapacityRight
+            count = count+1
+        }
+    }
+    if(FuelQuantityRight != "")
+    {   if (count == 0)
+        {
+        url = url + "?FuelQuantityRight=" + FuelQuantityRight
+        count = count+1
+        }
+        else
+        {
+            url = url + "&FuelQuantityRight=" + FuelQuantityRight
+            count = count+1
+        }
+    }
+    if(FuelQuantityLeft != "")
+    {   if (count == 0)
+        {
+        url = url + "?FuelQuantityLeft=" + FuelQuantityLeft
+        count = count+1
+        }
+        else
+        {
+            url = url + "&FuelQuantityLeft=" + FuelQuantityLeft
+            count = count+1
+        }
+    }
+    if(MaxAltitude != "")
+    {   if (count == 0)
+        {
+        url = url + "?MaxAltitude=" + MaxAltitude
+        count = count+1
+        }
+        else
+        {
+            url = url + "&MaxAltitude=" + MaxAltitude
+            count = count+1
+        }
+    }
+    if(FlightNo != "")
+    {   if (count == 0)
+        {
+        url = url + "?FlightNo=" + MaxAltitude
+        count = count+1
+        }
+        else
+        {
+            url = url + "&FlightNo=" + MaxAltitude
+            count = count+1
+        }
+    }
+console.log(url)
+xmlhttp.open("GET", url,true);
+xmlhttp.onload = function d(){
+    document.write(this.response)
+    document.write('<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">')
+    document.write('<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"/>') 
+        document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"/>')
+        document.write('<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"/>')
+
+}
+xmlhttp.send();
+
+}
+
+   
+        </script>
+    </head>
+    
+    <body>
+        <h1>Enter the parameters to filter</h1>
+        
+        <table border="1">
+                <tr>
+                    <td>MSN : </td>
+                    <td><input type="text" id="MSN"></td>
+                </tr>
+               
+            <tr><td>HarnessLength :</td><td> <input type="text" id="HarnessLength"></label></td></tr>
+        <tr><td>FlightProgram :</td><td><input type="text" id="FlightProgram"></label></td></tr>
+    <tr><td>GrossWeight : </td><td><input type="text" id="GrossWeight"></label></td></tr>
+<tr><td>AtmPressure : </td><td><input type="text" id="AtmPressure"></label></td></tr>
+<tr>    <td>   RoomTemp : </td><td><input type="text" id="RoomTemp"></label></td></tr>
+<tr>       <td>Airport : </td><td><input type="text" id="Airport"></label></td></tr>
+<tr>   <td>    FuelCapacityLeft : </td><td><input type="text" id="FuelCapacityLeft"></label></td></tr>
+<tr>   <td>    FuelCapacityRight : </td><td><input type="text" id="FuelCapacityRight"></label></td></tr>
+<tr>   <td>    FuelQuantityRight : </td><td><input type="text" id="FuelQuantityRight"></label></td></tr>
+<tr>   <td>    FuelQuantityLeft  : </td><td><input type="text" id="FuelQuantityLeft"></label></td></tr>
+<tr>  <td> MaxAltitude : </td><td><input type="text" id="MaxAltitude"></label></td></tr>
+<tr>   <td>    FlightNo : </td><td><input type="text" id="FlightNo"></label></td></tr>
+   </table>
+            <button id="Submit" name="Submit" value="Submit" onclick="show()">Show Data</button>
+       
+
+    </body>
+</html
