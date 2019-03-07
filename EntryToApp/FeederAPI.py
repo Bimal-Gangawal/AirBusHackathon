@@ -30,8 +30,11 @@ def post_data_in_db():
         return jsonify({"Status": False, "Message": "Improper JSON Body"})
     else:
         request_data = pd.DataFrame(pd.Series(request.json)).T
-        external_helper.insert_data_into_db(request_data)
-        return "Done"
+        status = external_helper.insert_data_into_db(request_data)
+        if status:
+            return "Done"
+        else:
+            return "Update fail"
 
 
 @app.route('/getFilterFlightData', methods=['GET', 'POST'])
@@ -120,7 +123,6 @@ def getFilteredData():
         </body>
         </html>
         '''
-        print(flights_info)
         return result
 
 

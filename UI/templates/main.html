@@ -39,6 +39,23 @@ xmlhttp.setRequestHeader("Content-Type", "application/json");
 "FlightNo": FlightNo
 }
 xmlhttp.send(JSON.stringify(submisson_dict));
+xmlhttp.onload = function p(){
+    alert(this.response)
+    document.getElementById("MSN").innerText = ""
+    document.getElementById("HarnessLength").innerText = ""
+    document.getElementById("FlightProgram").innerText = ""
+    document.getElementById("GrossWeight").innerText = ""
+    document.getElementById("AtmPressure").innerText = ""
+    document.getElementById("RoomTemp").innerText = ""
+    document.getElementById("Airport").innerText = ""
+    document.getElementById("FuelCapacityLeft").innerText = ""
+    document.getElementById("FuelCapacityRight").innerText = ""
+    document.getElementById("FuelQuantityRight").innerText = ""
+    document.getElementById("FuelQuantityLeft").innerText = ""
+    document.getElementById("MaxAltitude").innerText = ""
+    document.getElementById("FlightNo").innerText = ""
+
+}
 console.log(submisson_dict)
 }
 console.log(submisson_dict)
@@ -71,4 +88,4 @@ console.log(submisson_dict)
        
 
     </body>
-</html>
+</html

@@ -93,5 +93,7 @@ class ExternalHelperMethods(object):
             with _connection_local_host.cursor() as cursor:
                 cursor.execute(query)
                 _connection_local_host.commit()
+                return True
         except Exception as e:
             print(e)
+            return False
