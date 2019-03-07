@@ -82,7 +82,12 @@ class ExternalHelperMethods(object):
         FuelQuantityLeft = data_row['FuelQuantityLeft'] if 'FuelQuantityLeft' in data_row else None
         MaxAltitude = data_row['MaxAltitude'] if 'MaxAltitude' in data_row else None
         FlightNo = data_row['FlightNo'] if 'FlightNo' in data_row else None
-
+        if int(FuelCapacityLeft) < int(FuelQuantityLeft):
+            print('left')
+            return False
+        if int(FuelCapacityRight) < int(FuelQuantityRight):
+            print('right')
+            return False
         query = "INSERT INTO flights VALUES (" + str(MSN) + ',' + str(HarnessLength) + ',' + '"' +str(
             FlightProgram)+ '"' + ',' + str(GrossWeight) + ',' + str(AtmPressure) + ',' + str(RoomTemp) + ',' + '"'+ str(
             Airport) + '"'+ ',' + str(FuelCapacityLeft) + ',' + str(FuelCapacityRight)  + ',' + str(
